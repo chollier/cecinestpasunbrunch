@@ -57,7 +57,7 @@ __END__
 %html
   = yield
 
-@@ index
+@@ lyon69
 %h1 #Lyon69's recent photos
 for media_item in @images.data
   %img{:src => media_item.images.standart_resolution.url}
