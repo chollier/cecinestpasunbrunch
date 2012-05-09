@@ -35,10 +35,3 @@ get "/feed" do
   html
 end
 
-get "/lyon69" do
-  
-  images = Instagram.tag_recent_media("lyon69")
-  
-  puts images
-  
-end
