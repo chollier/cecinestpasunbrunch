@@ -22,7 +22,7 @@ end
 get "/oauth/callback" do
   response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
   session[:access_token] = response.access_token
-  redirect "/feed"
+  redirect "/lyon69"
 end
 
 get "/feed" do
@@ -40,7 +40,8 @@ get "/lyon69" do
   
   @images = Instagram.tag_recent_media("lyon69")
   
-  haml :lyon69, :format => :html5
+  erb :demo
+  # haml :lyon69, :format => :html5
  # images
  
  # html = "<h1>#Lyon69's recent photos</h1>"
