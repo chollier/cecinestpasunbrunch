@@ -1,6 +1,6 @@
 require "sinatra"
 require "instagram"
-require "haml"
+# require "haml"
 
 enable :sessions
 
@@ -52,16 +52,16 @@ get "/lyon69" do
 
 end
 
-__END__
-
-@@ layout
-%html
-  = yield
-
-@@ lyon69
-%h1 #Lyon69's recent photos
-- @images.data.each do |media_item|
-  %img{:src => media_item.images.standard_resolution.url}
+# __END__
+# 
+# @@ layout
+# %html
+#   = yield
+# 
+# @@ lyon69
+# %h1 #Lyon69's recent photos
+# - @images.data.each do |media_item|
+#   %img{:src => media_item.images.standard_resolution.url}
 
 
 
