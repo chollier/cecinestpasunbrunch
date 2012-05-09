@@ -37,7 +37,7 @@ end
 
 get "/lyon69" do
   
-  @images = Instagram.tag_recent_media("lyon69")
+  images = Instagram.tag_recent_media("lyon69")
   
  images
  
