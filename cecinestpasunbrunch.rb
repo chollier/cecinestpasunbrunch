@@ -60,7 +60,7 @@ __END__
 @@ lyon69
 %h1 #Lyon69's recent photos
 @images.data.each do |media_item|
-  %img{:src => media_item.images.standard_resolution.url}
+  %strong= media_item.images.standard_resolution.url
 
 
 
