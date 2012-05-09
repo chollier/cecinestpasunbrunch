@@ -37,9 +37,10 @@ end
 
 get "/lyon69" do
   
-  images = Instagram.tag_recent_media("lyon69")
+  @images = Instagram.tag_recent_media("lyon69")
   
- images
+  haml :lyon69
+ # images
  
  # html = "<h1>#Lyon69's recent photos</h1>"
  # for media_item in Instagram.tag_recent_media("lyon69")
@@ -48,3 +49,26 @@ get "/lyon69" do
  # html
 
 end
+
+__END__
+
+@@ layout
+%html
+  = yield
+
+@@ index
+%h1 #Lyon69's recent photos
+for media_item in @images.data
+  %img{:src => media_item.images.standart_resolution.url}
+end
+%div.title Hello world.
+
+
+
+
+
+
+
+
+
+
