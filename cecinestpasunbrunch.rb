@@ -1,5 +1,6 @@
 require "sinatra"
 require "instagram"
+require "haml"
 
 enable :sessions
 
