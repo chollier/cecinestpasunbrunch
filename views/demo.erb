@@ -62,7 +62,7 @@
 					thumbnail_navigation    :   0,			// Thumbnail navigation
 					slides 					:  	[			// Slideshow Images
 					<% for image in @images.data %>
-					{image : '<%= image.images.standard_resolution.url %>', title : '<%= image.caption.text %> par <%= image.caption.from.username %>', thumb : '<%= image.images.thumbnail.url %>', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
+					{image : '<%= image.images.standard_resolution.url %>', title : '<%=h image.caption.text %> par <%=h image.caption.from.username %>', thumb : '<%= image.images.thumbnail.url %>', url : '<%= image.link %>'},
 					
 					<% end %>
 												
