@@ -62,7 +62,7 @@
 					thumbnail_navigation    :   0,			// Thumbnail navigation
 					slides 					:  	[			// Slideshow Images
 					<% for image in @images.data %>
-					{image : '<%= image.images.standard_resolution.url %>', title : '<%=h image.caption.text %> par <%=h image.caption.from.username %>', thumb : '<%= image.images.thumbnail.url %>', url : '<%= image.link %>'},
+					{image : '<%= image.images.standard_resolution.url %>', title : '<%= escape image.caption.text %> par <%= escape image.caption.from.username %>', thumb : '<%= image.images.thumbnail.url %>', url : '<%= image.link %>'},
 					
 					<% end %>
 												
